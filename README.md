@@ -372,13 +372,13 @@ images/
 
 <h3 align="center">Sales Dashboard</h3>
 <p align="center">
-  <img src="images/02_Sales_dashboard.png" width="900">
+  <img src="images/02_sales_dashboard.png" width="900">
 </p>
 
 
 <h3 align="center">Customer Dashboard</h3>
 <p align="center">
-  <img src="images/03_Customer_dashboard.png" width="900">
+  <img src="images/03_customer_dashboard.png" width="900">
 </p>
 
 
