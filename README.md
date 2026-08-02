@@ -365,18 +365,45 @@ SuperStore Analytics/
 images/
 
 <h3 align="center">Executive Dashboard</h3>
-
 <p align="center">
   <img src="images/01_executive_dashboard.png" width="900">
 </p>
 
 
-![alt text](02_sales_dashboard.png) 
-![alt text](03_customer_dashboard.png) 
-![alt text](04_product_dashboard.png) 
-![alt text](05_regional_dashboard.png) 
-![alt text](06_time_dashboard.png)
-![alt text](07_profit_dashboard.png)
+<h3 align="center">Sales Dashboard</h3>
+<p align="center">
+  <img src="images/01_Sales_dashboard.png" width="900">
+</p>
+
+
+<h3 align="center">Customer Dashboard</h3>
+<p align="center">
+  <img src="images/01_Customer_dashboard.png" width="900">
+</p>
+
+
+<h3 align="center">Product Dashboard</h3>
+<p align="center">
+  <img src="images/01_product_dashboard.png" width="900">
+</p>
+
+
+<h3 align="center">Regional Dashboard</h3>
+<p align="center">
+  <img src="images/01_regional_dashboard.png" width="900">
+</p>
+
+
+<h3 align="center">Time Intelligence Dashboard</h3>
+<p align="center">
+  <img src="images/01_time_dashboard.png" width="900">
+</p>
+
+
+<h3 align="center">Profit Dashboard</h3>
+<p align="center">
+  <img src="images/01_profit_dashboard.png" width="900">
+</p>
 
 
 ---
@@ -386,19 +413,13 @@ images/
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/SuperStore-Analytics.git
+git clone https://github.com/varun_pathania-1/SuperStore-Analytics.git
 ```
 
 Navigate to the project folder:
 
 ```bash
 cd SuperStore-Analytics
-```
-
-Install Python dependencies:
-
-```bash
-pip install -r requirements.txt
 ```
 
 Open:
