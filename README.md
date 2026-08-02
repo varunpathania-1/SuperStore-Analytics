@@ -364,7 +364,7 @@ SuperStore Analytics/
 # 13. Dashboard Screenshots
 images/
 
-![alt text](01_executive_dashboard.png)
+![Executive Dashboard](01_executive_dashboard.png)
 ![alt text](02_sales_dashboard.png) 
 ![alt text](03_customer_dashboard.png) 
 ![alt text](04_product_dashboard.png) 
