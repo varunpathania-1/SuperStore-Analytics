@@ -323,14 +323,12 @@ Key insights generated from the analysis include:
 # 12. Folder Structure
 
 ```
-SuperStore Analytics/
-
-├── data/
-│   ├── retail_sales_raw.csv
-│   ├── retail_sales_sql_cleaned.csv
+SuperStore-Analytics/
+│
+├── 01_data/
 │   └── retail_sales_final.csv
 │
-├── sql/
+├── 02_sql/
 │   ├── 00_data_quality_checks.sql
 │   ├── 01_database_creation.sql
 │   ├── 02_data_cleaning.sql
@@ -344,19 +342,22 @@ SuperStore Analytics/
 │   ├── 09_indexes.sql
 │   └── 10_stored_procedures.sql
 │
-├── python/
+├── 03_python/
 │   ├── 01_data_validation.ipynb
 │   ├── 02_eda.ipynb
 │   └── 03_feature_engineering.ipynb
 │
-├── powerbi/
+├── 04_power bi/
 │   └── SuperStore_Analytics.pbix
 │
 ├── images/
 │
-├── README.md
 ├── DATA_DICTIONARY.md
-└── requirements.txt
+├── business_insights.md
+├── README.md
+├── requirements.txt
+├── LICENSE
+└── .gitignore
 ```
 
 ---
@@ -422,11 +423,36 @@ Navigate to the project folder:
 cd SuperStore-Analytics
 ```
 
-Open:
+Install Python Dependencies
+```bash
+pip install -r requirements.txt
+```
 
-* SQL scripts in MySQL Workbench
-* Python notebooks in Jupyter Notebook
-* Power BI report in Power BI Desktop
+## Open the Project:
+
+### SQL
+
+Open the SQL scripts from:
+```
+02_sql/
+```
+Use MySQL Workbench to execute the SQL workflow.
+
+### Python
+
+Open the notebooks from:
+```
+03_python/
+```
+Use Jupyter Notebook to run the Python analysis.
+
+### Power BI
+
+Open:
+```
+04_power bi/SuperStore_Analytics.pbix
+```
+using Power BI Desktop.
 
 ---
 
@@ -458,22 +484,25 @@ Future enhancements include:
 
 # ⭐ Skills Demonstrated
 
-* SQL
-* MySQL
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Power BI
-* DAX
-* Data Cleaning
-* ETL
-* Data Validation
-* Exploratory Data Analysis (EDA)
-* Feature Engineering
-* Business Intelligence
-* Dashboard Development
-* Data Storytelling
-* Business Analytics
-* Git & GitHub
+## Analytics:
+SQL • Data Cleaning • ETL • Data Validation • EDA • Feature Engineering • Business Analytics • Data Storytelling
+
+## Programming & Data:
+Python • Pandas • NumPy • Matplotlib • Seaborn
+
+## Business Intelligence:
+Power BI • DAX • Dashboard Development
+
+## Database:
+MySQL
+
+## Tools:
+Jupyter Notebook • Git • GitHub
+
+---
+
+## Author
+
+### Varun Pathania
+
+Computer Science & Engineering — Data Science
