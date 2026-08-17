@@ -484,19 +484,19 @@ Future enhancements include:
 
 # ⭐ Skills Demonstrated
 
-## Analytics:
+### Analytics:
 SQL • Data Cleaning • ETL • Data Validation • EDA • Feature Engineering • Business Analytics • Data Storytelling
 
-## Programming & Data:
+### Programming & Data:
 Python • Pandas • NumPy • Matplotlib • Seaborn
 
-## Business Intelligence:
+### Business Intelligence:
 Power BI • DAX • Dashboard Development
 
-## Database:
+### Database:
 MySQL
 
-## Tools:
+### Tools:
 Jupyter Notebook • Git • GitHub
 
 ---
