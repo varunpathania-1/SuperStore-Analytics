@@ -10,10 +10,7 @@ LIKE stg_retail_sales;
 INSERT INTO retail_sales_cleaned
 SELECT *
 FROM stg_retail_sales
-WHERE
-    TRIM(IFNULL(order_id,'')) <> ''
-    AND quantity > 0
-    AND days_to_ship >= 0;
+WHERE TRIM(IFNULL(order_id,'')) <> '' AND quantity > 0 AND days_to_ship >= 0;
     
 select * from retail_sales_cleaned limit 10;
 
@@ -55,9 +52,7 @@ WHEN UPPER(gender)='MALE' THEN 'Male'
 
 WHEN UPPER(gender)='F' THEN 'Female'
 WHEN UPPER(gender)='FEMALE' THEN 'Female'
-
 ELSE 'Other'
-
 END;
 
 -- Standardize Text Case
@@ -83,28 +78,25 @@ LOWER(SUBSTRING(product_category,2))
 -- Convert order_date before it was in varchar
 UPDATE retail_sales_cleaned
 SET order_date = STR_TO_DATE(order_date,'%Y-%m-%d'); -- Gives the error 
+
 -- then added a new column
 ALTER TABLE retail_sales_cleaned
 ADD COLUMN order_date_clean DATE;
+
 -- load the clean data into that column
 UPDATE retail_sales_cleaned
 SET order_date_clean =
 CASE
-    WHEN order_date REGEXP '^[0-9]{4}-[0-9]{2}-[0-9]{2}$'
-        THEN STR_TO_DATE(order_date, '%Y-%m-%d')
-
-    WHEN order_date REGEXP '^[0-9]{2}/[0-9]{2}/[0-9]{4}$'
-        THEN STR_TO_DATE(order_date, '%d/%m/%Y')
-
-    WHEN order_date REGEXP '^[A-Za-z]+ [0-9]{1,2}, [0-9]{4}$'
-        THEN STR_TO_DATE(order_date, '%M %d, %Y')
-
-    ELSE NULL
+WHEN order_date REGEXP '^[0-9]{4}-[0-9]{2}-[0-9]{2}$'
+THEN STR_TO_DATE(order_date, '%Y-%m-%d')
+WHEN order_date REGEXP '^[0-9]{2}/[0-9]{2}/[0-9]{4}$'
+THEN STR_TO_DATE(order_date, '%d/%m/%Y')
+WHEN order_date REGEXP '^[A-Za-z]+ [0-9]{1,2}, [0-9]{4}$'
+THEN STR_TO_DATE(order_date, '%M %d, %Y')
+ELSE NULL
 END;
 -- verify
-SELECT
-    order_date,
-    order_date_clean
+SELECT order_date, order_date_clean
 FROM retail_sales_cleaned
 LIMIT 20;
 -- droped the uncleaned column
@@ -126,11 +118,8 @@ SET customer_satisfaction =
 (
 SELECT avg_rating
 FROM
-(
-SELECT AVG(customer_satisfaction) avg_rating
-FROM retail_sales_cleaned
-) x
-)
+(SELECT AVG(customer_satisfaction) avg_rating
+FROM retail_sales_cleaned) x)
 WHERE customer_satisfaction IS NULL;
 
 -- Validation
@@ -142,8 +131,7 @@ SUM(quantity IS NULL),
 SUM(sales_amount IS NULL)
 FROM retail_sales_cleaned;
 -- duplicate check table
-SELECT
-order_id,
+SELECT order_id,
 COUNT(*)
 FROM retail_sales_cleaned
 GROUP BY order_id
